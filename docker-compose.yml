@@ -1,0 +1,15 @@
+# Sobe só o PostgreSQL (alternativa a instalar o Postgres na VM)
+services:
+  db:
+    image: postgres:16
+    restart: always
+    environment:
+      POSTGRES_DB: fifa
+      POSTGRES_USER: fifa
+      POSTGRES_PASSWORD: fifa
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:

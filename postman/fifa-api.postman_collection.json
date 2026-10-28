@@ -1,0 +1,136 @@
+{
+  "info": {
+    "name": "API FIFA - API Battle",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    },
+    {
+      "key": "apiKey",
+      "value": "troque-esta-chave"
+    }
+  ],
+  "item": [
+    {
+      "name": "POST /fifa - insere jogador",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-API-KEY",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/fifa",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "fifa"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"player_id\": 9001,\n  \"player_name\": \"Player_9001\",\n  \"age\": 24,\n  \"nationality\": \"Brazil\",\n  \"club\": \"Santos\",\n  \"position\": \"ST\",\n  \"overall_rating\": 80,\n  \"potential_rating\": 88,\n  \"matches_played\": 30,\n  \"goals\": 15,\n  \"assists\": 7,\n  \"minutes_played\": 2500,\n  \"market_value_million_eur\": 55.5,\n  \"contract_years_left\": 3,\n  \"injury_prone\": \"No\",\n  \"transfer_risk_level\": \"Low\"\n}"
+        }
+      }
+    },
+    {
+      "name": "GET /fifa/count",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-KEY",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/fifa/count",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "fifa",
+            "count"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET /fifa - todos",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-KEY",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/fifa",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "fifa"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET /fifa/id/1",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-KEY",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/fifa/id/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "fifa",
+            "id",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET /fifa/nat/Brazil",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-KEY",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/fifa/nat/Brazil",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "fifa",
+            "nat",
+            "Brazil"
+          ]
+        }
+      }
+    }
+  ]
+}

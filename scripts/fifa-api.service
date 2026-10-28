@@ -1,0 +1,15 @@
+# Copie para /etc/systemd/system/fifa-api.service
+# sudo systemctl daemon-reload && sudo systemctl enable --now fifa-api
+[Unit]
+Description=API FIFA - API Battle
+After=network.target postgresql.service
+
+[Service]
+User=ubuntu
+WorkingDirectory=/opt/fifa-api
+Environment=API_KEY=troque-esta-chave
+ExecStart=/usr/bin/java -Xms256m -Xmx512m -jar /opt/fifa-api/fifa-api.jar
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
